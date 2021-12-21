@@ -1,0 +1,128 @@
+
+header {
+    display: flex;
+    position: sticky;
+    padding: 1em;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Rubik;
+}
+
+.logo {
+    font-family: Rubik;
+    font-size: 2.5em;
+    margin-right: auto;
+    /* text-shadow: 0 -.25em 0 rgba(0 0 0 / .2),
+    0 -.5em 0 rgba(0 0 0 / .1),
+    0 -.75em 0 rgba(0 0 0 / .05); */
+}
+
+.highlight {
+    color: #07B8DF;
+    font-family: 'Meow Script';
+    font-size: 160%;
+    text-decoration: underline dashed black .25rem;
+}
+
+.logo .highlight {
+    font-size: 4rem;
+    
+}
+
+.button-primary {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 5px;
+    height: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #07B8DF;
+    font-family: Rubik;
+    font-size: 1em;
+    color: white;
+    /* border: 1px solid magenta; */
+}
+
+.tagline {
+    margin-block: 2em;
+    margin-inline: 4em;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.banner {
+    width: 100vw;
+    height: 10em;
+    background-color: #07b7df41;
+}
+main {
+    font-family: sans-serif;
+    width: 95%;
+}
+
+main p {
+    line-height: 1.4em;
+    margin-bottom: 2em;
+}
+
+/*** The new CSS Reset - version 1.4.3 (last updated 19.12.2021) ***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+ *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]){
+    display:none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly. */
+:where([contenteditable]){
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+}
