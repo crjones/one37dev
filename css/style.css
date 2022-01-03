@@ -14,12 +14,71 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2em;
     font-family: Rubik;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-block: .5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap:wrap; */
+    gap: 1em;
+}
+.service {
+    border: 1px solid #d6d6d6;
+    border-radius: .25em;
+}
+
+
+
+.service h3{
+    padding: .5em;
+    border-bottom: 1px solid #d6d6d6;
+    /* white-space: nowrap; */
+}
+
+.service p {
+    padding: .5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    gap: 2em;
+}
+
+section {
+    width: 100%;
+    max-width: 70vw;
+    /* border: 1px solid magenta */
+}
+
+.contact h2 {
+    color: white;
 }
 
 .logo {
     font-family: Rubik;
-    font-size: 2.5em;
+    font-size: 1.5em;
     margin-right: auto;
     /* text-shadow: 0 -.25em 0 rgba(0 0 0 / .2),
     0 -.5em 0 rgba(0 0 0 / .1),
@@ -29,8 +88,8 @@ body {
 .highlight {
     color: #07B8DF;
     font-family: 'Meow Script';
-    font-size: 160%;
-    text-decoration: underline dashed black .25rem;
+    font-size: 180%;
+    /* text-decoration: underline dashed black .25rem; */
 }
 
 .logo .highlight {
@@ -52,17 +111,34 @@ body {
     /* border: 1px solid magenta; */
 }
 
+.button-primary:hover {
+    filter: brightness(110%);
+}
+
 .tagline {
-    margin-block: 2em;
-    margin-inline: 4em;
-    font-size: 3rem;
+    margin-bottom: 2em;
+    margin-inline: 2em;
+    font-size: 2.5rem;
     text-align: center;
 }
 
-.banner {
+.tagline-connections {
+    position: relative;
+}
+.tagline-connections::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2em;
     width: 100vw;
-    height: 10em;
-    background-color: #07b7df41;
+    height:100%;
+    /* background-color: #07b7df41; */
+    background-image: url('../images/distributed-banner.svg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: 1px solid magenta; */
+    opacity: .1;
 }
 main {
     font-family: sans-serif;
@@ -72,6 +148,95 @@ main {
 main p {
     line-height: 1.4em;
     margin-bottom: 2em;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: rgba(7, 183, 223, 0.25);
+    font-size: 2em;
+    /* padding: 1rem; */
+    width: 100%;
+}
+
+body * {
+    /* border: 1px solid magenta; */
+}
+
+.contact input[type=text], .contact textarea {
+    display: inline;
+    position: relative;
+    /* background-color: white; */
+    color: #07B8DF;
+    text-align: center;
+    font-family: 'Meow Script';
+    font-size: 4rem;
+    /* text-decoration: underline dashed black .125rem; */
+    text-decoration-skip-ink: none;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+}
+
+
+.contact input::placeholder, .contact textarea::placeholder {
+    color: #07b7df4d;
+}
+
+.contact input[type=text] {
+    /* width: fit-content; */
+}
+
+.contact p {
+    display: inline;
+    width: fit-content;
+}
+
+.contact input {
+}
+
+.contact label {
+    display: none;
+}
+
+.contact input[type=submit] {
+    border: 2px solid #07B8DF;
+    color: white;
+    padding: 1em .5em;
+    outline: 1px solid white;
+    outline-offset: -.5em;
+    align-self:flex-end;
+    text-align: center;
+}
+
+form.contact-form {
+    flex-direction: row wrap;
+    align-items: center;
+    text-align: center;
+    margin-inline: 1em;
+}
+
+footer {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background-color: #07B8DF;
+    box-shadow: inset 0 -10px 0 #151515;
+    padding-top: 2.5em;
+    height: 10em;
+    width: 100%;
+}
+
+.footer__content {
+    /* border: 1px solid magenta; */
+    width: 100%;
+    max-width: 70vw;
+    font-size: 1rem;
+    font-family: sans-serif;
+    line-height: 1.4rem;
+    font-weight: 200;
+    color: white;
 }
 
 /*** The new CSS Reset - version 1.4.3 (last updated 19.12.2021) ***/
