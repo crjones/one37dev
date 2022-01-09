@@ -10,12 +10,17 @@ header {
 }
 
 body {
+    font-family: Rubik;
+}
+
+.pagewrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2em;
-    font-family: Rubik;
+    min-height: 100vh;
+
 }
 
 h1 {
@@ -144,6 +149,7 @@ section {
 main {
     font-family: sans-serif;
     width: 95%;
+    flex-grow: 1;
 }
 
 main p {
@@ -223,7 +229,7 @@ footer {
     align-items: top;
     justify-content: center;
     background-color: #07B8DF;
-    box-shadow: inset 0 -10px 0 #151515;
+    /* box-shadow: inset 0 -10px 0 #151515; */
     padding-top: 2.5em;
     height: 10em;
     width: 100%;
